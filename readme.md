@@ -14,15 +14,15 @@ Docker Compose:[ ](https://docs.docker.com/compose/install/)[Install Docker Comp
 
 Clone this repository to your local machine:
 
-git clone https://github.com/vedansh-agarwal/SocialMediaMicroservices.git
+    git clone https://github.com/vedansh-agarwal/SocialMediaMicroservices.git
 
 Change your working directory to the project root:
 
-`	`cd SocialMediaMicroservices
+    cd SocialMediaMicroservices
 
 To run the project, use the following command:
 
-`	`docker-compose up
+    docker-compose up
 
 This command will start the microservices and any associated containers using Docker Compose. If you have a local MongoDB installation on your machine, the application will use that database. If not, a MongoDB container created via Docker Compose will be used.
 
