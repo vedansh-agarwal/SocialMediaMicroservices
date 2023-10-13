@@ -1,0 +1,37 @@
+version: '3'
+services:
+  user_microservice:
+    build:
+      context: ./Users
+    environment:
+      JWT_SECRET: vedansh
+      JWT_EXPIRY: 24h
+    ports:
+      - '8000:3000'
+    depends_on:
+      - mongodb
+
+  profile_microservice:
+    build:
+      context: ./Profiles
+    environment:
+      JWT_SECRET: vedansh
+    ports:
+      - '8001:3000'
+    volumes:
+      - ./Profiles/uploads:/app/uploads
+    depends_on:
+      - mongodb
+
+  post_microservice:
+    build:
+      context: ./Posts
+    environment:
+      JWT_SECRET: vedansh
+    ports:
+      - '8002:3000'
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest

@@ -1,0 +1,19 @@
+{
+  "name": "posts",
+  "version": "1.0.0",
+  "description": "Post microservice for social media application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Vedansh Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.1"
+  }
+}
